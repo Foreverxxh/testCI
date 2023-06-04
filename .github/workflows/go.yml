@@ -11,7 +11,6 @@ on:
 
 jobs:
   bt-product-release:
-    if: ${{ github.ref == 'refs/heads/main' }}  # 检测main分支是否有更新
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2 # pull代码到运行服务器上
@@ -28,3 +27,4 @@ jobs:
       run: |
         docker build -t registry.cn-hangzhou.aliyuncs.com/xxh-test/go-test:$IMAGE_TAG .
         docker push registry.cn-hangzhou.aliyuncs.com/xxh-test/go-test:$IMAGE_TAG
+
