@@ -1,4 +1,4 @@
-FROM golang:1.16-alpine3.15 as builder
+FROM golang:1.19-alpine3.15 as builder
 COPY . /src
 WORKDIR /src
 ENV GOPROXY "https://goproxy.cn"
